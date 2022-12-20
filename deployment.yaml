@@ -19,7 +19,7 @@ spec:
   selector:
     matchLabels:
       app: hello-flask
-  replicas: 2
+  replicas: 1
   template:
     metadata:
       labels:
@@ -27,7 +27,7 @@ spec:
     spec:
       containers:
       - name: hello-flask
-        image: hello-flask:latest
+        image: ghcr.io/kshitijchoudha/flask-k8s-mf-template:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3232
